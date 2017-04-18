@@ -1,7 +1,8 @@
 #!/bin/zsh
 current=~/.dotfiles
 
-ln -s $current/vim/vimrc ~/.vimrc
-ln -s $current/tmux/tmux.conf ~/.tmux.conf
-ln -s $current/zsh/zshrc ~/.zshrc
-ln -s $current/git/gitconfig ~/.gitconfig
+ln -svf $current/vim/vimrc ~/.vimrc
+ln -svf $current/tmux/tmux.conf ~/.tmux.conf
+ln -svf $current/zsh/zshrc ~/.zshrc
+ln -svf $current/git/gitconfig ~/.gitconfig
+ln -svf $current/vim/vim ~/.vim

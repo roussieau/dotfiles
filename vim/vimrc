@@ -18,9 +18,7 @@ Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'scrooloose/syntastic' " Verification des erreurs
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
-
-" colorschemes
-Plugin 'chriskempson/base16-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -40,13 +38,12 @@ set softtabstop=2 " edit as if the tabs are 4 characters wide
 set shiftwidth=2 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized
+
 
 set encoding=utf8
-let base16colorspace=256  " Access colors present in 256 colorspace"
-set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
-set background=dark
-colorscheme delek 
 set number
 
 set autoindent " automatically set indent of new line
