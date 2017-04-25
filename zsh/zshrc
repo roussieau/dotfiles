@@ -1,6 +1,6 @@
 export ZSH=/$HOME/.oh-my-zsh
 # Theme
-ZSH_THEME="agnoster"
+ZSH_THEME="bureau"
 
 #Plugin
 plugins=(git)
@@ -33,3 +33,6 @@ then
     tmux attach-session -t "$ID"
   fi
 fi
+
+#Delete delay
+KEYTIMEOUT=1

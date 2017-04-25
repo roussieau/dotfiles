@@ -87,3 +87,6 @@ map <right> <nop>
 :nnoremap <C-n> :bn<CR>
 " Kill buffer
 map <C-d> :bd<CR>
+
+" Delete Delay
+set timeoutlen=1000 ttimeoutlen=0
