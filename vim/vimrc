@@ -21,6 +21,9 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tomasr/molokai'
+Plugin 'chriskempson/base16-vim'
+Plugin 'jacoborus/tender.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -41,14 +44,11 @@ set shiftwidth=2 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 
 set encoding=utf8
+set t_Co=256
 syntax on
-let g:solarized_termcolors=256
-set t_Co=16 
 set background=dark
 colorscheme molokai 
-
-let g:molokai_original = 1
-let g:rehash256 = 1
+:set term=screen-256color
 
 set autoindent " automatically set indent of new line
 set smartindent
@@ -67,7 +67,7 @@ set timeoutlen=1000 ttimeoutlen=0
 " close NERDTree after a file is opened
 let g:NERDTreeQuitOnOpen=1
 " show hidden files in NERDTree
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden=0
 " NERDTRee
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -106,3 +106,4 @@ map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
 map <silent> <F6> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
 " Delete Delay
 set timeoutlen=1000 ttimeoutlen=0
+set term=screen-256color

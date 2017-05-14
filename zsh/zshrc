@@ -21,7 +21,7 @@ export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 #Alias
-alias g = "git"
+alias g="git"
 # Automatically launch a tmux session
 if [[ -z "$TMUX" ]]
 then
@@ -36,3 +36,4 @@ fi
 
 #Delete delay
 KEYTIMEOUT=1
+
