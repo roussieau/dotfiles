@@ -21,10 +21,6 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
-
-" colorschemes
-"Plugin 'chriskempson/base16-vim'
-
 call vundle#end()
 filetype plugin indent on
 
@@ -108,3 +104,5 @@ map <C-d> :bd<CR>
 :set spelllang=en,fr
 map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
 map <silent> <F6> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
+" Delete Delay
+set timeoutlen=1000 ttimeoutlen=0
