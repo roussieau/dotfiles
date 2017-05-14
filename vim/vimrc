@@ -18,15 +18,19 @@ Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plugin 'scrooloose/syntastic' " Verification des erreurs
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
 
 " colorschemes
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
 
 set autoread " detect when a file is changed
 set rnu
+set number 
 set clipboard=unnamed
 
 " make backspace behave in a sane manner
@@ -40,14 +44,15 @@ set softtabstop=2 " edit as if the tabs are 4 characters wide
 set shiftwidth=2 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 
-syntax on
-
 set encoding=utf8
-let base16colorspace=256  " Access colors present in 256 colorspace"
-set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+syntax on
+let g:solarized_termcolors=256
+set t_Co=16 
 set background=dark
-colorscheme delek 
-set number
+colorscheme molokai 
+
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 set autoindent " automatically set indent of new line
 set smartindent
@@ -57,6 +62,8 @@ set showcmd
 
 set laststatus=2 " show the satus line all the time
 
+"Delete time for switch mode
+set timeoutlen=1000 ttimeoutlen=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -75,6 +82,9 @@ map <C-m> :NERDTreeToggle<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+"TagBar
+nmap <C-t> :TagbarToggle<CR>
+
 "Vim-airline
 let g:airline#extensions#tabline#enabled = 1
 
@@ -90,3 +100,11 @@ map <right> <nop>
 :nnoremap <C-n> :bn<CR>
 " Kill buffer
 map <C-d> :bd<CR>
+
+:set cursorline
+:set cursorcolumn
+
+"Language
+:set spelllang=en,fr
+map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
+map <silent> <F6> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
