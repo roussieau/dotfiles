@@ -24,13 +24,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tomasr/molokai'
 Plugin 'chriskempson/base16-vim'
 Plugin 'jacoborus/tender.vim'
+Plugin 'raimondi/delimitmate' "Close brackets
 call vundle#end()
 filetype plugin indent on
 
 set autoread " detect when a file is changed
 set rnu
 set number 
-set clipboard=unnamed
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
